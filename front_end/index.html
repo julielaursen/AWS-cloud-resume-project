@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Responsive Resume UI Design in HTML and CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="resume_wrapper">
+	<div class="resume_left">
+		<div class="resume_image">
+			<img src="/pic.jpg" alt="Resume_image">
+		</div>
+		<div class="resume_bottom">
+			<div class="resume_item resume_namerole">
+				<div class="name">Julie Laursen</div>
+				<div class="role">SOFTWARE DEVELOPER IN TEST</div>
+			</div>
+			<div class="resume_item resume_profile">
+				<div class="resume_title">Profile</div>
+				<div class="resume_info"> Automation engineer with experience implementing frameworks in multiple programming languages and utilizing CI/CD tools. Previous experience in network operations, IT management and product management.</div>
+			</div>
+			<div class="resume_item resume_address">
+				<div class="resume_title">Address</div>
+				<div class="resume_info">
+					Austin, TX<br/>
+					United States, 78739
+				</div>
+			</div>
+			<div class="resume_item resume_contact">
+				<div class="resume_title">Contact</div>
+				<div class="resume_info">
+					<div class="resume_subtitle">Phone</div>
+					<div class="resume_subinfo">512-203-4590</div>
+				</div>
+				<div class="resume_info">
+					<div class="resume_subtitle">Email</div>
+					<div class="resume_subinfo">julielaursen1@gmail.com</div>
+				</div>
+        	<div class="resume_info">
+					<div class="resume_subtitle">Github</div>
+            <div class="resume_subinfo"><a href = "https://github.com/julielaursen">github.com/julielaursen</a></div>
+        </div>
+			</div>
+			<div class="resume_item resume_skills">
+				<div class="resume_title">Skills</div>
+				<div class="resume_info">
+          	<div class="skills_list">
+						<div class="skills_left">Selenium</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 90%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">SQL</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 75%"></span>
+							</p>
+						</div>
+					</div>
+					<div class="skills_list">
+						<div class="skills_left">HTML</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 75%"></span>
+							</p>
+						</div>
+					</div>
+					<div class="skills_list">
+						<div class="skills_left">CSS</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 35%"></span>
+							</p>
+						</div>
+					</div>
+					<div class="skills_list">
+						<div class="skills_left">JS</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 25%"></span>
+							</p>
+						</div>
+					</div>
+					<div class="skills_list">
+						<div class="skills_left">Java</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 80%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">Python</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 60%"></span>
+							</p>
+						</div>
+					</div>
+          	<div class="skills_list">
+						<div class="skills_left">PHP</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 70%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">AWS</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 50%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">Git</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 80%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">Docker</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 40%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">CI/CD</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 50%"></span>
+							</p>
+						</div>
+					</div>
+          <div class="skills_list">
+						<div class="skills_left">Linux</div>
+						<div class="skills_bar">
+							<p>
+								<span style="width: 80%"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="resume_item resume_volunteering">
+      	<div class="resume_title">Volunteering</div>
+				<div class="resume_info">
+          <div class="resume_subtitle">Austin Automation Professionals Co-Organizer</div>
+					<div class="resume_subinfo">Helped create a meetup focused on sharing new ideas, frameworks, and practices from the thought leaders in the automation space. Through advocacy, public speaking, event planning, and social media, helped grow our automation local meetup to almost 2,000 automation professionals in the QA and Devops space.</div>
+        </div>
+		<div class="counter">
+      <br>
+		<script>
+			async function visitorCount() {
+  				const response = await fetch('https://hqrr9r3g1b.execute-api.us-east-1.amazonaws.com/prod/visitors',
+				   {
+					method: 'PUT'
+				   });
+  				const myJson = await response.json(); //extract JSON from the http response 
+				console.log(myJson.Attributes.visitorCount);
+				return myJson.Attributes.visitorCount;
+			}
+		</script>
+			<div id = 'add_to_me' class='resume_info'>
+				<h3>Visitor Count: </h3>
+			</div>
+			<script>			
+				async function addCode() {
+					const currentVisitorCount = await visitorCount();
+					document.getElementById("add_to_me").innerHTML = 
+					  "<p>Thank you for being visitor " + currentVisitorCount + " to my site </p>";
+					}
+					addCode();	
+			</script>
+		</div>
+        </div>
+    </div>
+  </div>
+	<div class="resume_right">
+		<div class="resume_item resume_namerole">
+			<div class="name">JULIE LAURSEN</div>
+			<div class="role">AUTOMATION ENGINEER</div>
+		</div>
+		<div class="resume_item resume_experience">
+			<div class="resume_title">Experience</div>
+			<div class="resume_info">
+				<div class="resume_data">
+					<div class="year">2020 - 2021</div>
+					<div class="content">
+            <p><b>Lawnstarter, Austin TX</b></p>
+            </p><b>Sr. QA Engineer</b></p>
+						<ul>
+              <li>UI/API testing in Codeception, Selenium, PHP, MySQL, Docker, AWS, CircleCI • Update backend (PHP) dev repositories to add APIs for data management • Update front end (Vue) dev repositories with locators to improve testability of elements • Performance testing in Javascript/Go </li>
+            </ul>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2019 - 2020</div>
+					<div class="content">
+            <p><b>Keller Williams, Austin TX</b></p>
+            <p><b>Sr. QA Engineer</b></p>
+						<p> Mobile, UI, and API testing using Selenium, Rest Assured, Java, Cucumber, CircleCI, Appium
+• Performance testing in Jmeter, k6 and Gatling
+• Automated chatbot testing through Botium, utilized GCP Dialogflow for chatbot ML training
+• Participated in SLO and SLI and Error Budget implementation on microservices</p>
+					</div>
+				</div>
+    <div class="resume_data">
+					<div class="year">2018 - 2019</div>
+					<div class="content">
+            <p><b>Keller Williams, Austin TX</b></p>
+            <p><b>Technical Product Manager</b></p>
+						<p> Review high level business and systems requirement documents, wire frames, and mockups
+• Assist in grooming the product backlog and bringing stories into Sprints
+• Deliver well documented, comprehensive requirements in Cucumber feature files</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2016 - 2017</div>
+					<div class="content">
+            <p><b>IBM Austin TX,</b></p>
+            <p><b>Enterprise Cloud Solutions Specialist</b></p>
+						<p>• Web automation testing in Java, Selenium, Protractor/Jasmine • Manual testing on Cloud Brokerage dashboard that integrates with cloud service providers such as AWS, Azure, IBM. 
+• Subject matter expert on customized configuration involving cloud provider simulator.</p>
+					</div>
+    </div>
+    <div class="resume_data">
+      <div class="year">2013 - 2016</div>
+      <div class="content">
+      <p><b>AT&T, Austin TX,</b></p>
+            <p><b>Jr. Quality Engineer</b></p>
+						<p>
+Create automated tests utilizing Python, RobotFramework and Selenium •
+Develop and utilize SQL queries using SQL-Server, MySql, oracle 11g •
+Manage the communication and verification of change requests between engineering and IT •
+Involved in all aspects of QA lifecycle including test case design, execution and regression •
+Manage the test environment including set up and maintenance of hardware regression lab</p>
+      </div>
+    </div>
+    <div class="resume_data">
+      <div class="year">2010-2013</div>
+      <div class="content">
+         <p><b>AT&T, Austin TX,</b></p>
+            <p><b>Network Operation Center Manager</b></p>
+						<p>
+Develop incident response, incident prioritization, and escalation procedure to meet SLAs •
+Communicate exception/outage reports to Management •
+Enable cross team communication between NOC and Engineering •
+Create employee goals and objectives and ensure they are met • Create monitoring dashboards in Sharepoint •
+Create and manage schedules, hiring, and training for employees</p>
+      </div>
+    </div>
+     <div class="resume_data">
+      <div class="year">2008-2010</div>
+      <div class="content">
+         <p><b>AT&T, Austin TX,</b></p>
+            <p><b>Network Operations Center Associate</b></p>
+						<p>
+Identify problems through monitoring. Analyze the duration and potential impact to customers, and proactively ensure they are consistent with service levels (SLAs) •
+Troubleshoot network elements including servers, routers, switches, access points, printers and controllers using Linux and Cisco CLI tools •
+Recommend bandwidth upgrades and process improvements•
+Understand and respond properly to escalation procedures</p>
+      </div>
+    </div>
+  </div>
+  </div>
+		<div class="resume_item resume_education">
+			<div class="resume_title">Education</div>
+			<div class="resume_info">
+				<div class="resume_data">
+					<div class="year">2020</div>
+					<div class="content">
+            <p><b>SANS Women's Cyberacademy, Dallas, TX</b></p>
+						<p>Selected to join a cohort of 25 women for the 2020 SANS Women's Immersion Academy from a pool of over 700 applicants. Over the course of six months, I took 3 SANS courses and achieved 3 accompanying GIAC certifications:
+<ul>
+  <li><b>SEC401 Security Essentials</b></li>
+  <li><b>SEC504 Hacker Tools, Techniques, Exploits, and Incident Handling</b></li>
+  <li><b>SEC542 Web Application Penetration Testing</li></b></p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2016 - 2019</div>
+					<div class="content">
+            <p><b>Austin Community College, Austin TX</b></p>
+            <p>Associates in Computer Programming.</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2013 - 2015</div>
+					<div class="content">
+            <p><b>Southern Illinois University, Carbondale IL</b></p>
+						<p>Masters in Business Administration</p>
+					</div>
+				</div>
+				<div class="resume_data">
+					<div class="year">2004 - 2006</div>
+					<div class="content">
+            <p><b>Southern Illinois University, Carbondale IL</b></p>
+            <p>Bachelors in Information Systems Technologies</p>
+					</div>
+				</div>
+  </div>
+  </div>
+   <div class="resume_item resume_education">
+     <div class="resume_title">Certifications</div>
+			<div class="resume_info">
+				<div class="resume_data">
+            <p><b>AWS</b> <a href="https://www.credly.com/badges/799811dc-d2dd-4645-9fee-b70ad1fdbf0d/public_url">AWS Certified Practitioner</a></p>
+        </div>
+        <div class="resume_data">
+            <p><b>Google Cloud</b><a href="https://www.credential.net/1b4093f2-157f-4109-b366-68caa5226258?key=30cbcf4c13707db211628059af876bd7570d82993b5a917b0674c7dffca9683e"> Certified Cloud Architect</a></p>
+					</div>
+        <div class="resume_data">
+            <p><b>CompTIA</b><a href="https://www.credly.com/badges/e721873f-5432-4360-a6da-f6c5190d2867/public_url"> Cloud Essentials</a></p>
+					</div>
+        <div class="resume_data">
+            <p><b>GIAC</b> <a href="https://www.credly.com/badges/e655118e-505d-4dde-bba8-421030c43cc1/public_url"> GIAC Security Essentials Certification</a></p>
+					</div>
+        <div class="resume_data">
+            <p><b>GIAC</b><a href="https://www.credly.com/badges/e655118e-505d-4dde-bba8-421030c43cc1/public_url"> GIAC Certified Incident Handler</a></p>
+					</div>
+        <div class="resume_data">
+            <p><b>GIAC</b><a href="https://www.credly.com/badges/267e7782-ebf0-4c44-bcfc-a80302e4147c/public_url"> GIAC Web Application Penetration Tester</a></p>
+					</div>
+        <div class="resume_data">
+            <p><b>ASTQB</b> ISTQB Foundations of Testing
+        </div>
+          <div class="resume_data">
+            <p><b>Association for Software Testing</b> BBST Test Design</p>
+					</div>
+				</div>
+      </div>
+		</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
